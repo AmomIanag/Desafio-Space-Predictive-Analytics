@@ -1,56 +1,150 @@
-# Welcome to your Expo app 👋
+# Space Predictive Analytics
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
-## Get started
+![Banner do Projeto](./assets/banner.png)
 
-1. Install dependencies
+## Descrição
 
-   ```bash
-   npm install
-   ```
+O **Space Predictive Analytics** é um aplicativo mobile desenvolvido em React Native com Expo para simular o monitoramento inteligente de uma missão espacial. A solução apresenta dashboards com dados simulados de sensores, energia, comunicação e estabilidade orbital, além de alertas automáticos baseados em limites críticos. Como diferencial, o app também possui modo claro/escuro, persistência local com AsyncStorage e integração com a NASA Open API para exibir dados astronômicos reais.
 
-2. Start the app
+## Equipe
 
-   ```bash
-   npx expo start
-   ```
+| Nome                   | RM       |
+| -------------          | -------- |
+| Amom Ianaguivara Brito | RM565718 |
+| Fernanto Antônio       | RM562549 |
+| Victor Chen            | RM565363 |
 
-In the output, you'll find options to open the app in a
+## Telas do Aplicativo
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+### Login
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+![Login](./assets/screenshots/login.png)
 
-## Get a fresh project
+Tela inicial de autenticação do usuário, permitindo o acesso ao aplicativo por meio de e-mail e senha cadastrados.
 
-When you're ready, run:
+### Cadastro
+
+![Cadastro](./assets/screenshots/cadastro.png)
+
+Formulário de cadastro com nome, turma, RM, e-mail, senha e confirmação de senha, incluindo validações dos campos preenchidos.
+
+### Home — Dashboard Principal
+
+![Home](./assets/screenshots/home.png)
+
+Visão geral da missão espacial simulada, exibindo nome da missão, data de início, altitude orbital, tripulação e resumo dos principais sistemas monitorados.
+
+### Dashboard de Sensores
+
+![Sensores](./assets/screenshots/sensores.png)
+
+Dashboard com dados simulados de sensores ambientais, incluindo temperatura, pressão, radiação e umidade, além de análise preditiva sobre possíveis riscos.
+
+### Dashboard de Energia
+
+![Energia](./assets/screenshots/energia.png)
+
+Indicadores do sistema de energia da missão, mostrando nível da bateria, geração solar, consumo, autonomia estimada e balanço energético.
+
+### Dashboard de Comunicação
+
+![Comunicação](./assets/screenshots/comunicacao.png)
+
+Monitoramento do sistema de comunicação, incluindo intensidade do sinal, latência, taxa de dados e qualidade da transmissão.
+
+### Alertas
+
+![Alertas](./assets/screenshots/alertas.png)
+
+Central de alertas gerados automaticamente com base nos dados simulados da missão, organizados por nível de criticidade.
+
+### NASA Open API
+
+![NASA](./assets/screenshots/nasa.png)
+
+Tela integrada com a NASA Open API, exibindo a imagem astronômica do dia, título, data e descrição oficial retornada pela API.
+
+### Configurações
+
+![Configurações](./assets/screenshots/configuracoes.png)
+
+Tela de configurações do aplicativo, exibindo dados do usuário, preferências da aplicação, modo claro/escuro e opção de sair da conta.
+
+### Modo Claro
+
+![Modo Claro](./assets/screenshots/modo-claro.png)
+
+Exemplo da interface utilizando o tema claro, demonstrando a personalização visual do aplicativo.
+
+## Funcionalidades
+
+* [x] Dashboard principal com resumo da missão espacial simulada
+* [x] Dashboard de sensores com dados em tempo real simulado
+* [x] Dashboard de energia com nível de bateria, geração solar e consumo
+* [x] Dashboard de comunicação com sinal, latência e taxa de dados
+* [x] Sistema de alertas automáticos por limiar crítico
+* [x] Interpretação inteligente dos dados monitorados
+* [x] Análises preditivas para apoio à tomada de decisão
+* [x] Login e cadastro de usuário com validação
+* [x] Persistência de sessão, usuário, alertas e preferências com AsyncStorage
+* [x] Navegação com Expo Router usando Tabs e rotas de autenticação
+* [x] Context API para gerenciamento de estado global
+* [x] Alternância entre modo claro e modo escuro
+* [x] Integração com NASA Open API
+
+## Tecnologias
+
+* React Native
+* Expo
+* Expo Router
+* JavaScript
+* Context API
+* AsyncStorage
+* NASA Open API
+* React Hooks: useState e useEffect
+
+## Como Executar
+
+### Pré-requisitos
+
+* Node.js instalado
+* Expo Go instalado no celular ou emulador Android/iOS configurado
+* Git instalado na máquina
+
+### Instalação
+
+Clone o repositório:
 
 ```bash
-npm run reset-project
+git clone https://github.com/seu-usuario/seu-repo.git
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Acesse a pasta do projeto:
 
-### Other setup steps
+```bash
+cd SpacePredictiveAnalytics
+```
 
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
+Instale as dependências:
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Inicie o projeto:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npx expo start
+```
 
-## Join the community
+Após iniciar o projeto, escaneie o QR Code com o aplicativo Expo Go ou pressione `a` no terminal para abrir no emulador Android.
 
-Join our community of developers creating universal apps.
+## Vídeo de Demonstração
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+[Clique aqui para assistir à demonstração](https://youtube.com/...)
+
+## Licença
+
+Este projeto foi desenvolvido para fins acadêmicos — FIAP 2026.
