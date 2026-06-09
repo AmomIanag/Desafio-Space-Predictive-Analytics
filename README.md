@@ -2,7 +2,7 @@
 
 ### Global Solution 2026.1 — Cross-Platform Application Development | FIAP
 
-![Banner do Projeto](./assets/banner.png)
+![Banner do Projeto](./assets/screenshot/banner.png)
 
 ## Descrição
 
