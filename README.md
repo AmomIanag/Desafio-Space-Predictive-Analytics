@@ -187,7 +187,7 @@ npm install
 
 ## Vídeo de Demonstração
 
-[Clique aqui para assistir à demonstração](https://youtube.com/...)
+[Clique aqui para assistir à demonstração](https://www.youtube.com/watch?v=C9Sl3RNBuF4)
 
 ## Licença
 
