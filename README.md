@@ -109,37 +109,81 @@ Exemplo da interface utilizando o tema claro, demonstrando a personalização vi
 
 ### Pré-requisitos
 
-* Node.js instalado
-* Expo Go instalado no celular ou emulador Android/iOS configurado
-* Git instalado na máquina
+Antes de iniciar o projeto, é necessário ter instalado:
 
-### Instalação
+- Node.js
+- Git
+- Expo Go no celular ou emulador Android/iOS configurado
+- Editor de código, como Visual Studio Code
 
-Clone o repositório:
+### Clonando o repositório
+
+Clone o repositório com o comando:
 
 ```bash
-git clone https://github.com/seu-usuario/seu-repo.git
+git clone https://github.com/AmomIanag/Desafio-Space-Predictive-Analytics.git
 ```
-
 Acesse a pasta do projeto:
-
 ```bash
-cd SpacePredictiveAnalytics
+cd Desafio-Space-Predictive-Analytics
 ```
+### Instalando as dependências
 
-Instale as dependências:
+Todas as bibliotecas utilizadas no projeto estão listadas no arquivo package.json.
 
+Para instalar as dependências, execute:
 ```bash
 npm install
 ```
+Esse comando instala automaticamente as dependências necessárias para o funcionamento do aplicativo, incluindo React Native, Expo, Expo Router, AsyncStorage e demais bibliotecas utilizadas no projeto.
 
-Inicie o projeto:
+### Configurando a API da NASA
 
+O aplicativo possui integração com a NASA Open API, utilizada para exibir a imagem astronômica do dia.
+
+No arquivo:
+```bash
+src/app/(tabs)/nasa.js
+```
+localize o endpoint da API:
+```bash
+https://api.nasa.gov/planetary/apod?api_key=SUA_CHAVE_AQUI
+```
+Substitua SUA_CHAVE_AQUI pela sua chave da NASA Open API.
+Também é possível utilizar a chave de teste:
+```bash
+DEMO_KEY
+```
+Porém, a DEMO_KEY possui limite baixo de requisições, então o ideal é utilizar uma chave própria da NASA para testar e apresentar o projeto.
+
+### Iniciando o projeto
+
+Para iniciar o aplicativo, execute:
 ```bash
 npx expo start
 ```
+Após iniciar o Metro Bundler, escolha uma das opções:
 
-Após iniciar o projeto, escaneie o QR Code com o aplicativo Expo Go ou pressione `a` no terminal para abrir no emulador Android.
+Pressione a no terminal para abrir no emulador Android;
+Escaneie o QR Code com o Expo Go no celular;
+Use o painel do Expo no navegador para escolher o dispositivo.
+
+### Limpando cache, se necessário
+
+Caso o aplicativo apresente erro de cache, tela travada ou carregamento infinito, execute:
+```bash
+npx expo start -c
+```
+Esse comando reinicia o Expo limpando o cache do projeto.
+
+### Observação
+
+A pasta node_modules não é enviada para o GitHub, pois ela é gerada automaticamente na instalação das dependências.
+
+Para recriar a pasta node_modules em outra máquina, basta executar:
+```bash
+npm install
+```
 
 ## Vídeo de Demonstração
 
