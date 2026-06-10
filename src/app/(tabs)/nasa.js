@@ -24,17 +24,23 @@ export default function NasaScreen() {
       setCarregando(true);
       setErro(null);
 
-      const resposta = await fetch( // Endpoint da NASA que retorna imagem astronômica do dia
-        'https://api.nasa.gov/planetary/apod?api_key=dXG9AoR7Py672nSkQXV7uxHv3x33XdnXZxcc1w3x' // API KEY
-      );
+      const resposta = await fetch(
+  'https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY'
+);
 
-      const dados = await resposta.json();
+const texto = await resposta.text();
 
-      if (!resposta.ok) {
-        throw new Error(dados.msg || 'Erro ao buscar dados da NASA.');
-      }
+console.log('Resposta bruta NASA:', texto);
 
-      setDadosNasa(dados);
+const dados = JSON.parse(texto);
+
+console.log('Resposta NASA:', dados);
+
+if (!resposta.ok) {
+  throw new Error(dados.msg || dados.error?.message || 'Erro ao buscar dados da NASA.');
+}
+
+setDadosNasa(dados);
     } catch (e) {
       setErro('Não foi possível carregar os dados da NASA no momento.');
       console.log('Erro NASA API:', e);

@@ -77,10 +77,10 @@ export default function LoginScreen() {
             keyboardType="email-address"
           />
 
-          <Text style={styles.label}>PASSWORD</Text>
+          <Text style={styles.label}>Senha</Text>
           <TextInput
             style={styles.input}
-            placeholder="Enter your password"
+            placeholder="Digite sua senha"
             placeholderTextColor="#4A5568"
             value={password}
             onChangeText={setPassword}
